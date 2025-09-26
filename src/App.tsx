@@ -1,7 +1,12 @@
 import React from "react";
 import { Navbar } from "./Sections/NavBar";
 import { HeroSection } from "./Sections/HeroSections";
-
+import AboutUs from "./Sections/AboutSection";
+import { GoalsSection } from "./Sections/GoalsSection";
+import { ServicesSection } from "./Sections/ServicesSection";
+import { ProjectSection } from "./Sections/ProjectSection";
+import { ContactSection } from "./Sections/ContactSection";
+import { FooterSection } from "./Sections/FooterSection";
 
 export default function App(): React.ReactElement {
   // const clientsData = [
@@ -23,6 +28,12 @@ export default function App(): React.ReactElement {
     <div className="bg-white overflow-hidden w-full relative flex flex-col">
       <Navbar />
       <HeroSection />
+      <AboutUs />
+      <GoalsSection />
+      <ServicesSection />
+      <ProjectSection />
+      <ContactSection />
+      <FooterSection />
     </div>
   );
-};
+}
