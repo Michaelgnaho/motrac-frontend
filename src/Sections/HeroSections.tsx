@@ -10,7 +10,7 @@ export const HeroSection: React.FC = () => {
     >
       {/* Overlay for readability */}
       <div className="absolute inset-0 bg-black/60" />
-      <div className="relative z-10 flex flex-col items-start justify-center gap-[35px] w-full max-w-[1011px] px-4">
+      <div className="relative z-10 flex flex-col items-start justify-center gap-[35px] w-full px-10 max-w-[1289px] py-[100px]">
         <header className="w-full max-w-[1013px] h-auto">
           <h1 className="w-full font-bold text-white text-[50px]">
             Over 20 Years of Transforming <br /> Human Capital, ICT, and <br /> Policy
@@ -18,9 +18,9 @@ export const HeroSection: React.FC = () => {
           </h1>
         </header>
 
-        <h2 className="w-full h-auto font-medium text-white text-[22px]">
-          MOTRAC Global Resources delivers world-class consulting and creative
-          solutions in Human Capital Development,  ICT, Business Growth, Governance
+        <h2 className="w-full h-auto font-medium text-white text-[22px] ">
+          MOTRAC Global Resources delivers world-class consulting and <br /> creative
+          solutions in Human Capital Development, ICT, Bussiness <br /> Growth, Governance
           Intelligence, and Economic Policy.
         </h2>
 
