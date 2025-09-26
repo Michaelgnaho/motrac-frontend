@@ -11,7 +11,7 @@ export const Navbar: React.FC = () => {
 
   return (
     <nav className="w-full h-20 flex items-center justify-center bg-[#f23b11]">
-      <div className="flex items-center justify-between w-full max-w-[1289px] px-4">
+      <div className="flex items-center justify-between w-full max-w-[1289px] px-10">
         <div className="flex items-center">
           <img
             className="w-12 h-[51px] object-cover"
