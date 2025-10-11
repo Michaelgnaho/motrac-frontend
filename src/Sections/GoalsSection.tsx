@@ -55,7 +55,6 @@ export const GoalsSection: React.FC = () => {
           />
         </div>
       </div>
-
       <div className="flex-1 flex items-center justify-center relative">
         <img
           className="object-cover h-[620px] w-auto"
