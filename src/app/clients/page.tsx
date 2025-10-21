@@ -1,3 +1,4 @@
+"use client";
 import { Building2, Handshake, Quote } from "lucide-react";
 import Link from "next/link";
 import ClientCard from "./ClientCard";
