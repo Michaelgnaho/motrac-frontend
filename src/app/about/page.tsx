@@ -40,7 +40,7 @@ export default function AboutPage() {
                 talented and exceptional professionals with unrivalled
                 problem-solving proficiency and acumen in the Services and
                 Consultancy industry. We are poised to deliver solutions to our
-                Clients' Business development and Consultancy problems and
+                Clients&apos; Business development and Consultancy problems and
                 provide Project Management services as needed.
               </p>
             </div>
@@ -174,10 +174,10 @@ export default function AboutPage() {
             </p>
             <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
               The module of our service delivery is channeled to exceed our
-              client's expectations and aspiration. Our people are driven by the
-              zeal to succeed, to be second to none in what we do and to impact
-              our immediate environment and creating visibility, by making our
-              clients and their brands leaders in their own right!
+              client&apos;s expectations and aspiration. Our people are driven
+              by the zeal to succeed, to be second to none in what we do and to
+              impact our immediate environment and creating visibility, by
+              making our clients and their brands leaders in their own right!
             </p>
           </div>
         </div>
@@ -190,7 +190,7 @@ export default function AboutPage() {
             Ready to Transform Your Organization?
           </h2>
           <p className="text-xl text-white mb-10 max-w-3xl mx-auto">
-            Let's work together to unlock potential and drive sustainable
+            Let&apos;s work together to unlock potential and drive sustainable
             growth.
           </p>
           <a

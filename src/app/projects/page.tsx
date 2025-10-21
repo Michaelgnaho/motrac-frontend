@@ -146,7 +146,7 @@ export default function ProjectsPage() {
       {/* Closing CTA Section */}
       <section className="container mx-auto px-6 lg:px-12 py-20 text-center">
         <h3 className="text-2xl lg:text-3xl font-bold text-gray-800">
-          Let's create transformative solutions together.
+          Let&apos;s create transformative solutions together.
         </h3>
         <Link href="/contact">
           <button className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white px-6 py-3 rounded-lg font-medium mt-6 hover:opacity-90 transition-opacity">

@@ -1,5 +1,6 @@
 import { Building2, Handshake, Quote } from "lucide-react";
 import Link from "next/link";
+import ClientCard from "./ClientCard";
 
 export default function ClientsPage() {
   const clients = [
@@ -62,43 +63,9 @@ export default function ClientsPage() {
       {/* Clients Grid */}
       <section className="container mx-auto px-6 lg:px-12 pb-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
-          {clients.map((client, index) => {
-            const IconComponent = client.icon;
-            return (
-              <div
-                key={index}
-                className="bg-white border border-gray-100 shadow-md rounded-xl overflow-hidden hover:border-[#F23B11] transition-colors"
-              >
-                {/* Image Space */}
-                <div className="w-full h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative">
-                  <img
-                    src={client.image}
-                    alt={client.name}
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      // Fallback to icon if image fails to load
-                      e.target.style.display = "none";
-                    }}
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200">
-                    <div className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white p-4 rounded-full">
-                      <IconComponent size={32} />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="p-8 text-center">
-                  <h3 className="text-lg font-semibold text-gray-900">
-                    {client.name}
-                  </h3>
-                  <p className="text-gray-700 text-sm leading-relaxed mt-2">
-                    {client.description}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
+          {clients.map((client, index) => (
+            <ClientCard key={index} client={client} />
+          ))}
         </div>
       </section>
 

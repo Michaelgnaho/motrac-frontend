@@ -2,9 +2,10 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { StaticImageData } from "next/image";
 
 type ProjectImageProps = {
-  src: string;
+  src: string | StaticImageData;
   alt?: string;
 };
 
