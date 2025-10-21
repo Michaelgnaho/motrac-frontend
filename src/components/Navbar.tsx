@@ -7,14 +7,12 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Mission & Vision", href: "#mission" },
-    { name: "Services", href: "#services" },
-    { name: "People", href: "#people" },
-    { name: "Projects", href: "#projects" },
-    { name: "Clients", href: "#clients" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Projects", href: "/projects" },
+    { name: "Clients", href: "/clients" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -81,7 +79,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="#contact"
+                href="/contact"
                 onClick={() => setIsOpen(false)}
                 className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white px-6 py-3 rounded-md font-semibold text-center mt-2 hover:opacity-90 transition-opacity"
               >

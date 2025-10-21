@@ -7,7 +7,7 @@ export default function HeroSection() {
     <section
       className="relative w-full min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: "url('/hero-image.png')",
+        backgroundImage: "url('../../public/hero-image.png')",
       }}
     >
       {/* Overlay for readability */}
