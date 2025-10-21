@@ -1,38 +1,3 @@
-// import React from "react";
-
-// export default function page() {
-//   const clients = [
-//     "Kogi State Government",
-//     "Vami Farms Nigeria Limited",
-//     "National Youth Council of Nigeria (NYCN)",
-//   ];
-//   return (
-//     <div>
-//       <section className="container mx-auto px-6 lg:px-12 py-20 bg-gray-50">
-//         <div className="text-center">
-//           <h2 className="text-3xl lg:text-4xl font-bold text-gray-800">
-//             Our Clients
-//           </h2>
-//           <p className="text-gray-700 text-lg mt-4 max-w-3xl mx-auto">
-//             We are proud to have partnered with leading institutions and
-//             organizations across Nigeria.
-//           </p>
-//         </div>
-//         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-10 text-center">
-//           {clients.map((client, index) => (
-//             <div
-//               key={index}
-//               className="bg-gradient-to-r from-[#F23B11]/10 to-[#ff6844]/10 py-6 rounded-xl font-semibold text-gray-800"
-//             >
-//               {client}
-//             </div>
-//           ))}
-//         </div>
-//       </section>
-//     </div>
-//   );
-// }
-
 import { Building2, Handshake, Quote } from "lucide-react";
 import Link from "next/link";
 
@@ -42,17 +7,20 @@ export default function ClientsPage() {
       name: "Kogi State Government",
       description: "Policy design, ICT innovation, and governance consulting.",
       icon: Building2,
+      image: "/images/clients/kogi-state-government.jpg",
     },
     {
       name: "Vami Farms Nigeria Limited",
       description: "Visual documentation and development strategy consulting.",
       icon: Handshake,
+      image: "/images/clients/vami-farms.jpg",
     },
     {
       name: "National Youth Council of Nigeria (NYCN)",
       description:
         "Capacity-building, youth development, and media collaboration.",
       icon: Building2,
+      image: "/images/clients/nycn.jpg",
     },
   ];
 
@@ -99,17 +67,35 @@ export default function ClientsPage() {
             return (
               <div
                 key={index}
-                className="bg-white border border-gray-100 shadow-md rounded-xl p-8 text-center"
+                className="bg-white border border-gray-100 shadow-md rounded-xl overflow-hidden hover:border-[#F23B11] transition-colors"
               >
-                <div className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white p-3 rounded-full w-fit mx-auto mb-4">
-                  <IconComponent size={24} />
+                {/* Image Space */}
+                <div className="w-full h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative">
+                  <img
+                    src={client.image}
+                    alt={client.name}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      // Fallback to icon if image fails to load
+                      e.target.style.display = "none";
+                    }}
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200">
+                    <div className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white p-4 rounded-full">
+                      <IconComponent size={32} />
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900">
-                  {client.name}
-                </h3>
-                <p className="text-gray-700 text-sm leading-relaxed mt-2">
-                  {client.description}
-                </p>
+
+                {/* Content */}
+                <div className="p-8 text-center">
+                  <h3 className="text-lg font-semibold text-gray-900">
+                    {client.name}
+                  </h3>
+                  <p className="text-gray-700 text-sm leading-relaxed mt-2">
+                    {client.description}
+                  </p>
+                </div>
               </div>
             );
           })}
@@ -140,7 +126,7 @@ export default function ClientsPage() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-100 shadow-md rounded-xl p-6 text-left"
+              className="bg-white border border-gray-100 shadow-md rounded-xl p-6 text-left hover:shadow-lg transition-shadow"
             >
               <Quote className="text-[#F23B11] mb-4" size={32} />
               <p className="text-gray-700 text-sm leading-relaxed">
@@ -161,7 +147,7 @@ export default function ClientsPage() {
           impact.
         </h3>
         <Link href="/contact">
-          <button className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white px-6 py-3 rounded-lg font-medium mt-6">
+          <button className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white px-6 py-3 rounded-lg font-medium mt-6 hover:opacity-90 transition-opacity">
             Partner With Us
           </button>
         </Link>

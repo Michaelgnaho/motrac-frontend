@@ -1,4 +1,8 @@
+"use client";
+
 import { Monitor, Users, Briefcase, Mic, BookOpen } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function ServicesPage() {
   const services = [
@@ -7,30 +11,40 @@ export default function ServicesPage() {
       title: "Information Communication Technology (ICT)",
       description:
         "We offer innovative products, services, and solutions in Web Design & Hosting, Database Management, Software Development, and Enterprise Content Management.",
+      image:
+        "https://i.pinimg.com/736x/87/10/05/871005a54223842c4b891d8864b67acb.jpg",
     },
     {
       icon: Users,
       title: "Human Capital Development",
       description:
         "We provide training, mentoring, and capacity-building programs to empower individuals for sustainable livelihoods.",
+      image:
+        "https://i.pinimg.com/1200x/7b/51/09/7b51090ec52d00e5c7deb467417cdcd8.jpg",
     },
     {
       icon: Briefcase,
       title: "Business Development",
       description:
         "We deliver comprehensive business development solutions that drive growth, innovation, and competitive advantage for organizations across various sectors.",
+      image:
+        "https://i.pinimg.com/736x/7e/d6/5a/7ed65a934c44e7486ba52a5c813b45b8.jpg",
     },
     {
       icon: BookOpen,
       title: "Economic and Policy Development Consulting",
       description:
         "We create developmental platforms that integrate economic and political frameworks tailored to meet the needs of the populace.",
+      image:
+        "https://i.pinimg.com/1200x/44/09/f3/4409f36659f44eb7bca9acc5c46ffb9e.jpg",
     },
     {
       icon: Mic,
       title: "Media & Entertainment",
       description:
         "From event planning and management to trend curation and showbiz consultancy, we create experiences that engage and inspire. Our media solutions include Media Planning, Content Production, Outdoor Advertising, and Public Relations Management.",
+      image:
+        "https://i.pinimg.com/736x/d2/d5/16/d2d5169315233a2abfb29b918db941f1.jpg",
     },
   ];
 
@@ -59,17 +73,35 @@ export default function ServicesPage() {
             return (
               <div
                 key={index}
-                className="bg-white border border-gray-100 shadow-md rounded-xl p-6 hover:border-[#F23B11]"
+                className="bg-white border border-gray-100 shadow-md rounded-xl overflow-hidden hover:border-[#F23B11] transition-colors"
               >
-                <div className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white p-3 rounded-full w-fit mb-4">
-                  <IconComponent size={28} />
+                {/* Image Space */}
+                <div className="w-full h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    width={400}
+                    height={192}
+                    className="w-full h-full object-cover"
+                    priority={index < 3}
+                    unoptimized
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200 opacity-0 hover:opacity-100 transition-opacity">
+                    <div className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white p-4 rounded-full">
+                      <IconComponent size={32} />
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  {service.description}
-                </p>
+
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
               </div>
             );
           })}
@@ -235,12 +267,12 @@ export default function ServicesPage() {
             Partner with Motrac Global Resources Limited to transform ideas into
             impactful results.
           </p>
-          <a
+          <Link
             href="/contact"
-            className="inline-block bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white px-8 py-3 rounded-lg font-medium hover:opacity-90"
+            className="inline-block bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity"
           >
             Get Started Today
-          </a>
+          </Link>
         </div>
       </section>
     </main>

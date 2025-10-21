@@ -7,6 +7,14 @@ import {
   BookOpen,
 } from "lucide-react";
 import Link from "next/link";
+import ProjectImage from "../../components/ProjectImage";
+import image1 from "../../../public/referral.png";
+import image2 from "../../../public/worldbank-image6.png";
+import image3 from "../../../public/manifesto.png";
+import image4 from "../../../public/website.png";
+import image5 from "../../../public/website.png";
+import image6 from "../../../public/newDirection.png";
+import image7 from "../../../public/kogi.png";
 
 export default function ProjectsPage() {
   const projects = [
@@ -17,6 +25,7 @@ export default function ProjectsPage() {
         "A strategic policy framework promoting inclusive governance through bottom-top development planning.",
       year: "May 2016",
       icon: FileText,
+      image: image1,
     },
     {
       title:
@@ -25,6 +34,7 @@ export default function ProjectsPage() {
         "Converting policy intangibles into tangible action plans for improved public sector efficiency.",
       year: "September 2018",
       icon: CheckCircle,
+      image: image2,
     },
     {
       title:
@@ -33,6 +43,7 @@ export default function ProjectsPage() {
         "Institutional memory development and administrative documentation framework.",
       year: "January 2016 – January 2020",
       icon: BookOpen,
+      image: image1,
     },
     {
       title:
@@ -41,6 +52,7 @@ export default function ProjectsPage() {
         "Comprehensive strategy design producing 38+ campaign outcome strategies.",
       year: "November 2018",
       icon: Briefcase,
+      image: image3,
     },
     {
       title: "Production of a Visual Documentary for Vami Farms",
@@ -48,6 +60,7 @@ export default function ProjectsPage() {
         "A high-quality visual documentation for a conglomerate of farms across Nasarawa, Kwara, and Kogi States.",
       year: "March 2021",
       icon: Globe,
+      image: image4,
     },
     {
       title: "Development of Kogipedia.net Web Application",
@@ -55,6 +68,7 @@ export default function ProjectsPage() {
         "A digital repository showcasing the achievements of the Governor of Kogi State over six years.",
       year: "March 2021",
       icon: FolderOpen,
+      image: image5,
     },
     {
       title:
@@ -63,6 +77,7 @@ export default function ProjectsPage() {
         "A visually engaging publication celebrating the National Media Merit Award Kogi Edition.",
       year: "October 2021",
       icon: BookOpen,
+      image: image6,
     },
     {
       title: "Content Development and General Program Management",
@@ -70,13 +85,8 @@ export default function ProjectsPage() {
         "Oversight and management of various communication and media-driven development programs.",
       year: "Ongoing",
       icon: CheckCircle,
+      image: image7,
     },
-  ];
-
-  const clients = [
-    "Kogi State Government",
-    "Vami Farms Nigeria Limited",
-    "National Youth Council of Nigeria (NYCN)",
   ];
 
   return (
@@ -105,44 +115,31 @@ export default function ProjectsPage() {
             return (
               <div
                 key={index}
-                className="bg-white border border-gray-100 shadow-md rounded-xl p-6"
+                className="bg-white border border-gray-100 shadow-md rounded-xl overflow-hidden hover:border-[#F23B11] transition-colors"
               >
-                <div className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white p-3 rounded-full w-fit mb-4">
-                  <IconComponent size={24} />
+                {/* Image Space */}
+                <div className="w-full h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative">
+                  <ProjectImage src={project.image} alt={project.title} />
+                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200">
+                    <div className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white p-4 rounded-full">
+                      <IconComponent size={32} />
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900">
-                  {project.title}
-                </h3>
-                <p className="text-gray-700 text-sm leading-relaxed mt-2">
-                  {project.description}
-                </p>
-                <p className="text-xs text-gray-500 mt-2">{project.year}</p>
+
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold text-gray-900">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-700 text-sm leading-relaxed mt-2">
+                    {project.description}
+                  </p>
+                  <p className="text-xs text-gray-500 mt-2">{project.year}</p>
+                </div>
               </div>
             );
           })}
-        </div>
-      </section>
-
-      {/* Clients Section */}
-      <section className="container mx-auto px-6 lg:px-12 py-20 bg-gray-50">
-        <div className="text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-800">
-            Our Clients
-          </h2>
-          <p className="text-gray-700 text-lg mt-4 max-w-3xl mx-auto">
-            We are proud to have partnered with leading institutions and
-            organizations across Nigeria.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-10 text-center">
-          {clients.map((client, index) => (
-            <div
-              key={index}
-              className="bg-gradient-to-r from-[#F23B11]/10 to-[#ff6844]/10 py-6 rounded-xl font-semibold text-gray-800"
-            >
-              {client}
-            </div>
-          ))}
         </div>
       </section>
 
@@ -152,7 +149,7 @@ export default function ProjectsPage() {
           Let's create transformative solutions together.
         </h3>
         <Link href="/contact">
-          <button className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white px-6 py-3 rounded-lg font-medium mt-6">
+          <button className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white px-6 py-3 rounded-lg font-medium mt-6 hover:opacity-90 transition-opacity">
             Get in Touch
           </button>
         </Link>

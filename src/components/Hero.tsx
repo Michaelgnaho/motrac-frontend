@@ -1,13 +1,14 @@
 "use client";
 
 import { ArrowRight, Briefcase } from "lucide-react";
+import heroImage from "../../public/hero-image.png";
 
 export default function HeroSection() {
   return (
     <section
       className="relative w-full min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: "url('../../public/hero-image.png')",
+        backgroundImage: `url(${heroImage.src})`,
       }}
     >
       {/* Overlay for readability */}
