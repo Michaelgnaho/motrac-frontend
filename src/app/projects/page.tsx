@@ -134,26 +134,37 @@ export default function ProjectsPage() {
                 animateOpacity
                 threshold={0.1}
               >
-                <div className="bg-white border border-gray-100 shadow-md rounded-xl overflow-hidden hover:border-[#F23B11] transition-colors">
-                  {/* Image Space */}
-                  <div className="w-full h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative">
-                    <ProjectImage src={project.image} alt={project.title} />
-                    <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200">
-                      <div className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white p-4 rounded-full">
-                        <IconComponent size={32} />
+                <div className="bg-white border border-gray-100 shadow-md rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
+                  {/* Project Image */}
+                  <div className="relative w-full h-64">
+                    <ProjectImage
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                    {/* Overlay with icon */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent flex items-end p-6">
+                      <div className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white p-3 rounded-full">
+                        <IconComponent size={24} />
                       </div>
                     </div>
                   </div>
 
-                  {/* Content */}
+                  {/* Project Content */}
                   <div className="p-6">
-                    <h3 className="text-lg font-semibold text-gray-900">
+                    <div className="flex items-center justify-between mb-3">
+                      <p className="text-xs text-gray-500 font-medium">
+                        {project.year}
+                      </p>
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">
                       {project.title}
                     </h3>
-                    <p className="text-gray-700 text-sm leading-relaxed mt-2">
+                    <p className="text-gray-700 text-sm leading-relaxed">
                       {project.description}
                     </p>
-                    <p className="text-xs text-gray-500 mt-2">{project.year}</p>
                   </div>
                 </div>
               </AnimatedContent>
