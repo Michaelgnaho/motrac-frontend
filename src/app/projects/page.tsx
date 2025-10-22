@@ -1,3 +1,4 @@
+"use client";
 import {
   FolderOpen,
   FileText,
@@ -8,13 +9,14 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import ProjectImage from "../../components/ProjectImage";
-import image1 from "../../../public/referral.png";
-import image2 from "../../../public/worldbank-image6.png";
-import image3 from "../../../public/manifesto.png";
-import image4 from "../../../public/website.png";
-import image5 from "../../../public/website.png";
-import image6 from "../../../public/newDirection.png";
-import image7 from "../../../public/kogi.png";
+import AnimatedContent from "@/components/AnimatedContent";
+import image1 from "@/../public/referral.png";
+import image2 from "@/../public/worldbank-image6.png";
+import image3 from "@/../public/manifesto.png";
+import image4 from "@/../public/website.png";
+import image5 from "@/../public/website.png";
+import image6 from "@/../public/newDirection.png";
+import image7 from "@/../public/kogi.png";
 
 export default function ProjectsPage() {
   const projects = [
@@ -93,18 +95,27 @@ export default function ProjectsPage() {
     <div className="bg-white min-h-screen">
       {/* Header Section */}
       <section className="container mx-auto px-6 lg:px-12 py-20 text-center">
-        <h1 className="text-4xl lg:text-5xl font-bold text-gray-800">
-          Our Projects
-        </h1>
-        <div className="flex justify-center">
-          <div className="w-16 h-1 bg-[#F23B11] rounded-full my-4"></div>
-        </div>
-        <p className="text-gray-700 text-lg leading-relaxed max-w-4xl mx-auto mt-6">
-          Over the years, Motrac Global Resources Limited has successfully
-          executed numerous strategic consulting and development projects across
-          policy design, media, ICT, and capacity development — consistently
-          delivering excellence and impact.
-        </p>
+        <AnimatedContent
+          distance={60}
+          direction="vertical"
+          duration={0.8}
+          initialOpacity={0}
+          animateOpacity
+          threshold={0.2}
+        >
+          <h1 className="text-4xl lg:text-5xl font-bold text-gray-800">
+            Our Projects
+          </h1>
+          <div className="flex justify-center">
+            <div className="w-16 h-1 bg-[#F23B11] rounded-full my-4"></div>
+          </div>
+          <p className="text-gray-700 text-lg leading-relaxed max-w-4xl mx-auto mt-6">
+            Over the years, Motrac Global Resources Limited has successfully
+            executed numerous strategic consulting and development projects
+            across policy design, media, ICT, and capacity development —
+            consistently delivering excellence and impact.
+          </p>
+        </AnimatedContent>
       </section>
 
       {/* Projects Grid */}
@@ -113,31 +124,39 @@ export default function ProjectsPage() {
           {projects.map((project, index) => {
             const IconComponent = project.icon;
             return (
-              <div
+              <AnimatedContent
                 key={index}
-                className="bg-white border border-gray-100 shadow-md rounded-xl overflow-hidden hover:border-[#F23B11] transition-colors"
+                distance={80}
+                direction="vertical"
+                duration={0.7}
+                delay={0.1 + index * 0.1}
+                initialOpacity={0}
+                animateOpacity
+                threshold={0.1}
               >
-                {/* Image Space */}
-                <div className="w-full h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative">
-                  <ProjectImage src={project.image} alt={project.title} />
-                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200">
-                    <div className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white p-4 rounded-full">
-                      <IconComponent size={32} />
+                <div className="bg-white border border-gray-100 shadow-md rounded-xl overflow-hidden hover:border-[#F23B11] transition-colors">
+                  {/* Image Space */}
+                  <div className="w-full h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative">
+                    <ProjectImage src={project.image} alt={project.title} />
+                    <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200">
+                      <div className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white p-4 rounded-full">
+                        <IconComponent size={32} />
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                {/* Content */}
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-700 text-sm leading-relaxed mt-2">
-                    {project.description}
-                  </p>
-                  <p className="text-xs text-gray-500 mt-2">{project.year}</p>
+                  {/* Content */}
+                  <div className="p-6">
+                    <h3 className="text-lg font-semibold text-gray-900">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-700 text-sm leading-relaxed mt-2">
+                      {project.description}
+                    </p>
+                    <p className="text-xs text-gray-500 mt-2">{project.year}</p>
+                  </div>
                 </div>
-              </div>
+              </AnimatedContent>
             );
           })}
         </div>
@@ -145,14 +164,24 @@ export default function ProjectsPage() {
 
       {/* Closing CTA Section */}
       <section className="container mx-auto px-6 lg:px-12 py-20 text-center">
-        <h3 className="text-2xl lg:text-3xl font-bold text-gray-800">
-          Let&apos;s create transformative solutions together.
-        </h3>
-        <Link href="/contact">
-          <button className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white px-6 py-3 rounded-lg font-medium mt-6 hover:opacity-90 transition-opacity">
-            Get in Touch
-          </button>
-        </Link>
+        <AnimatedContent
+          distance={60}
+          direction="vertical"
+          duration={0.8}
+          delay={0.2}
+          initialOpacity={0}
+          animateOpacity
+          threshold={0.2}
+        >
+          <h3 className="text-2xl lg:text-3xl font-bold text-gray-800">
+            Let&apos;s create transformative solutions together.
+          </h3>
+          <Link href="/contact">
+            <button className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white px-6 py-3 rounded-lg font-medium mt-6 hover:opacity-90 transition-opacity">
+              Get in Touch
+            </button>
+          </Link>
+        </AnimatedContent>
       </section>
     </div>
   );

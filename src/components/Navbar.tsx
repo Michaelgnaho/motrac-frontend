@@ -49,7 +49,7 @@ export default function Navbar() {
           {/* CTA Button - Desktop */}
           <div className="hidden lg:block">
             <Link
-              href="#contact"
+              href="/contact"
               className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white px-6 py-2.5 rounded-md font-semibold text-sm hover:opacity-90 transition-opacity"
             >
               Get Started

@@ -2,6 +2,7 @@
 import { Building2, Handshake, Quote } from "lucide-react";
 import Link from "next/link";
 import ClientCard from "./ClientCard";
+import AnimatedContent from "@/components/AnimatedContent";
 
 export default function ClientsPage() {
   const clients = [
@@ -48,77 +49,135 @@ export default function ClientsPage() {
     <div className="bg-white min-h-screen">
       {/* Header Section */}
       <section className="container mx-auto px-6 lg:px-12 py-20 text-center">
-        <h1 className="text-4xl lg:text-5xl font-bold text-gray-800">
-          Our Clients
-        </h1>
-        <div className="flex justify-center">
-          <div className="w-16 h-1 bg-[#F23B11] rounded-full my-4"></div>
-        </div>
-        <p className="text-gray-700 text-lg leading-relaxed max-w-4xl mx-auto mt-6">
-          We are privileged to have partnered with government institutions,
-          private organizations, and development agencies that share our
-          commitment to excellence, innovation, and sustainable growth.
-        </p>
+        <AnimatedContent
+          distance={60}
+          direction="vertical"
+          duration={0.8}
+          initialOpacity={0}
+          animateOpacity
+          threshold={0.2}
+        >
+          <h1 className="text-4xl lg:text-5xl font-bold text-gray-800">
+            Our Clients
+          </h1>
+          <div className="flex justify-center">
+            <div className="w-16 h-1 bg-[#F23B11] rounded-full my-4"></div>
+          </div>
+          <p className="text-gray-700 text-lg leading-relaxed max-w-4xl mx-auto mt-6">
+            We are privileged to have partnered with government institutions,
+            private organizations, and development agencies that share our
+            commitment to excellence, innovation, and sustainable growth.
+          </p>
+        </AnimatedContent>
       </section>
 
       {/* Clients Grid */}
       <section className="container mx-auto px-6 lg:px-12 pb-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
           {clients.map((client, index) => (
-            <ClientCard key={index} client={client} />
+            <AnimatedContent
+              key={index}
+              distance={80}
+              direction="vertical"
+              duration={0.7}
+              delay={0.2 + index * 0.15}
+              initialOpacity={0}
+              animateOpacity
+              threshold={0.1}
+            >
+              <ClientCard client={client} />
+            </AnimatedContent>
           ))}
         </div>
       </section>
 
       {/* Partnership Philosophy Section */}
       <section className="container mx-auto px-6 lg:px-12">
-        <div className="bg-gradient-to-r from-[#F23B11]/10 to-[#ff6844]/10 py-16 rounded-xl mt-20 text-center">
-          <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-2xl font-bold mb-4">
-            Partnerships Built on Trust and Results
-          </h2>
-          <p className="text-gray-700 text-lg leading-relaxed max-w-3xl mx-auto">
-            Our relationships go beyond transactions — we collaborate, innovate,
-            and grow with our clients to achieve measurable impact.
-          </p>
-        </div>
+        <AnimatedContent
+          distance={60}
+          direction="vertical"
+          duration={0.8}
+          delay={0.2}
+          initialOpacity={0}
+          animateOpacity
+          threshold={0.2}
+        >
+          <div className="bg-gradient-to-r from-[#F23B11]/10 to-[#ff6844]/10 py-16 rounded-xl mt-20 text-center">
+            <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-2xl font-bold mb-4">
+              Partnerships Built on Trust and Results
+            </h2>
+            <p className="text-gray-700 text-lg leading-relaxed max-w-3xl mx-auto">
+              Our relationships go beyond transactions — we collaborate,
+              innovate, and grow with our clients to achieve measurable impact.
+            </p>
+          </div>
+        </AnimatedContent>
       </section>
 
       {/* Testimonials Section */}
       <section className="container mx-auto px-6 lg:px-12 py-20">
-        <div className="text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-800">
-            What Our Partners Say
-          </h2>
-        </div>
+        <AnimatedContent
+          distance={60}
+          direction="vertical"
+          duration={0.8}
+          initialOpacity={0}
+          animateOpacity
+          threshold={0.2}
+        >
+          <div className="text-center">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-800">
+              What Our Partners Say
+            </h2>
+          </div>
+        </AnimatedContent>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
           {testimonials.map((testimonial, index) => (
-            <div
+            <AnimatedContent
               key={index}
-              className="bg-white border border-gray-100 shadow-md rounded-xl p-6 text-left hover:shadow-lg transition-shadow"
+              distance={80}
+              direction="vertical"
+              duration={0.7}
+              delay={0.2 + index * 0.15}
+              initialOpacity={0}
+              animateOpacity
+              threshold={0.1}
             >
-              <Quote className="text-[#F23B11] mb-4" size={32} />
-              <p className="text-gray-700 text-sm leading-relaxed">
-                {testimonial.quote}
-              </p>
-              <p className="text-[#F23B11] font-semibold mt-4">
-                — {testimonial.client}
-              </p>
-            </div>
+              <div className="bg-white border border-gray-100 shadow-md rounded-xl p-6 text-left hover:shadow-lg transition-shadow">
+                <Quote className="text-[#F23B11] mb-4" size={32} />
+                <p className="text-gray-700 text-sm leading-relaxed">
+                  {testimonial.quote}
+                </p>
+                <p className="text-[#F23B11] font-semibold mt-4">
+                  — {testimonial.client}
+                </p>
+              </div>
+            </AnimatedContent>
           ))}
         </div>
       </section>
 
       {/* Call-to-Action Section */}
       <section className="container mx-auto px-6 lg:px-12 py-20 text-center bg-gray-50">
-        <h3 className="text-2xl lg:text-3xl font-bold text-gray-800">
-          Join our network of satisfied clients and partners driving real
-          impact.
-        </h3>
-        <Link href="/contact">
-          <button className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white px-6 py-3 rounded-lg font-medium mt-6 hover:opacity-90 transition-opacity">
-            Partner With Us
-          </button>
-        </Link>
+        <AnimatedContent
+          distance={60}
+          direction="vertical"
+          duration={0.8}
+          delay={0.2}
+          initialOpacity={0}
+          animateOpacity
+          threshold={0.2}
+        >
+          <h3 className="text-2xl lg:text-3xl font-bold text-gray-800">
+            Join our network of satisfied clients and partners driving real
+            impact.
+          </h3>
+          <Link href="/contact">
+            <button className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white px-6 py-3 rounded-lg font-medium mt-6 hover:opacity-90 transition-opacity">
+              Partner With Us
+            </button>
+          </Link>
+        </AnimatedContent>
       </section>
     </div>
   );
