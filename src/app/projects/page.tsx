@@ -137,13 +137,9 @@ export default function ProjectsPage() {
                 <div className="bg-white border border-gray-100 shadow-md rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
                   {/* Project Image */}
                   <div className="relative w-full h-64">
-                    <ProjectImage
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
+                    <div className="object-cover w-full h-full">
+                      <ProjectImage src={project.image} alt={project.title} />
+                    </div>
                     {/* Overlay with icon */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent flex items-end p-6">
                       <div className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white p-3 rounded-full">
