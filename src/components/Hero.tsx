@@ -28,6 +28,23 @@ export default function HeroSection() {
       >
         <div className="relative z-10 container mx-auto px-6 sm:px-10 lg:px-16 py-24 lg:py-32">
           <div className="flex flex-col items-start justify-center gap-8 max-w-5xl">
+            {/* Tagline */}
+            <AnimatedContent
+              distance={80}
+              direction="vertical"
+              duration={1}
+              delay={0.2}
+              initialOpacity={0}
+              animateOpacity
+              threshold={0.1}
+            >
+              <div className="w-full">
+                <p className="text-[#F23B11] text-sm sm:text-base lg:text-lg font-semibold uppercase tracking-wider">
+                  Unleashing Potential • Driving Sustainable Growth
+                </p>
+              </div>
+            </AnimatedContent>
+
             {/* Headline */}
             <AnimatedContent
               distance={80}
@@ -40,8 +57,9 @@ export default function HeroSection() {
             >
               <header className="w-full">
                 <h1 className="font-bold text-white text-4xl sm:text-5xl lg:text-6xl leading-tight">
-                  Transforming Potential into <br className="hidden sm:block" />
-                  Productivity
+                  Transforming Africa&apos;s Intellectual Capital into{" "}
+                  <br className="hidden sm:block" />
+                  Global Competitiveness
                 </h1>
               </header>
             </AnimatedContent>
@@ -58,10 +76,11 @@ export default function HeroSection() {
             >
               <div className="w-full max-w-3xl">
                 <p className="font-medium text-white text-lg sm:text-xl lg:text-2xl leading-relaxed">
-                  At Motrac Global Resources Limited, we recognize potentials
-                  and develop capacities in people, guaranteeing growth and
-                  development in businesses, organizations, and government
-                  institutions.
+                  In an age defined by volatility, disruption, and accelerated
+                  innovation, MOTRAC Global Resources Limited stands as a
+                  transformative hybrid enterprise — merging strategic
+                  consultancy, technology development, creative intelligence,
+                  and human capital engineering into one dynamic ecosystem.
                 </p>
               </div>
             </AnimatedContent>
@@ -78,24 +97,24 @@ export default function HeroSection() {
             >
               <div className="w-full flex flex-col sm:flex-row gap-5 sm:gap-8 mt-4">
                 <a
-                  href="/about"
+                  href="/services"
                   className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#F23B11] to-[#ff6844] hover:opacity-90 text-white text-lg sm:text-xl font-semibold rounded-md px-8 py-4 transition-opacity"
                 >
-                  Learn More
+                  Discover The MOTRAC Nexus
                   <ArrowRight size={24} />
                 </a>
 
                 <a
-                  href="/services"
+                  href="/about"
                   className="inline-flex items-center justify-center gap-3 border-2 border-white bg-transparent hover:bg-white/10 text-white text-lg sm:text-xl font-semibold rounded-md px-8 py-4 transition-colors"
                 >
-                  Our Services
+                  Learn More
                   <Briefcase size={24} />
                 </a>
               </div>
             </AnimatedContent>
 
-            {/* Optional Stats or Trust Indicators */}
+            {/* Infographic Panel - Metrics */}
             <AnimatedContent
               distance={60}
               direction="vertical"
@@ -105,29 +124,38 @@ export default function HeroSection() {
               animateOpacity
               threshold={0.1}
             >
-              <div className="w-full flex flex-wrap gap-8 sm:gap-12 mt-8 pt-8 border-t border-white/30">
+              <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mt-8 pt-8 border-t border-white/30">
                 <div className="flex flex-col">
-                  <span className="text-3xl sm:text-4xl font-bold text-white">
-                    20+
+                  <span className="text-3xl sm:text-4xl font-bold text-[#F23B11]">
+                    55% ↑
                   </span>
                   <span className="text-sm sm:text-base text-white/90 mt-1">
-                    Years Experience
+                    Innovation ROI from Indigenous Consulting Models
                   </span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-3xl sm:text-4xl font-bold text-white">
-                    100+
+                  <span className="text-3xl sm:text-4xl font-bold text-[#F23B11]">
+                    72%
                   </span>
                   <span className="text-sm sm:text-base text-white/90 mt-1">
-                    Projects Delivered
+                    Client Retention Rate Target by 2026
                   </span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-3xl sm:text-4xl font-bold text-white">
-                    5
+                  <span className="text-3xl sm:text-4xl font-bold text-[#F23B11]">
+                    3
                   </span>
                   <span className="text-sm sm:text-base text-white/90 mt-1">
-                    Core Services
+                    Continents: Africa • Europe • North America
+                  </span>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-3xl sm:text-4xl font-bold text-[#F23B11]">
+                    1.5x
+                  </span>
+                  <span className="text-sm sm:text-base text-white/90 mt-1">
+                    Impact Quotient (IQ) Target: ROI on Social + Economic
+                    Outcomes
                   </span>
                 </div>
               </div>

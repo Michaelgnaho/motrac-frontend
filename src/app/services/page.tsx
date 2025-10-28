@@ -1,6 +1,15 @@
 "use client";
 
-import { Monitor, Users, Briefcase, Mic, BookOpen } from "lucide-react";
+import {
+  Monitor,
+  Users,
+  Briefcase,
+  Mic,
+  BookOpen,
+  TrendingUp,
+  Target,
+  Award,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import AnimatedContent from "@/components/AnimatedContent";
@@ -10,49 +19,122 @@ export default function ServicesPage() {
     {
       icon: Monitor,
       title: "Information Communication Technology (ICT)",
+      shortDesc: "Digital Infrastructure & Innovation Systems",
       description:
-        "We offer innovative products, services, and solutions in Web Design & Hosting, Database Management, Software Development, and Enterprise Content Management.",
+        "We engineer digital ecosystems that power transformation — from enterprise platforms to data-driven decision systems.",
       image:
         "https://i.pinimg.com/736x/87/10/05/871005a54223842c4b891d8864b67acb.jpg",
-    },
-    {
-      icon: Users,
-      title: "Human Capital Development",
-      description:
-        "We provide training, mentoring, and capacity-building programs to empower individuals for sustainable livelihoods.",
-      image:
-        "https://i.pinimg.com/1200x/7b/51/09/7b51090ec52d00e5c7deb467417cdcd8.jpg",
-    },
-    {
-      icon: Briefcase,
-      title: "Business Development",
-      description:
-        "We deliver comprehensive business development solutions that drive growth, innovation, and competitive advantage for organizations across various sectors.",
-      image:
-        "https://i.pinimg.com/736x/7e/d6/5a/7ed65a934c44e7486ba52a5c813b45b8.jpg",
-    },
-    {
-      icon: BookOpen,
-      title: "Economic and Policy Development Consulting",
-      description:
-        "We create developmental platforms that integrate economic and political frameworks tailored to meet the needs of the populace.",
-      image:
-        "https://i.pinimg.com/1200x/44/09/f3/4409f36659f44eb7bca9acc5c46ffb9e.jpg",
+      impact: "30-40% operational efficiency gains",
+      metrics: [
+        "Custom Software & Application Development",
+        "Cloud Infrastructure & Digital Transformation",
+        "Data Analytics & Business Intelligence Systems",
+        "Cybersecurity & IT Governance",
+        "Enterprise Content Management Solutions",
+      ],
     },
     {
       icon: Mic,
-      title: "Media & Entertainment",
+      title: "Strategic Communications & Media Intelligence",
+      shortDesc: "Brand Strategy & Digital Engagement",
       description:
-        "From event planning and management to trend curation and showbiz consultancy, we create experiences that engage and inspire. Our media solutions include Media Planning, Content Production, Outdoor Advertising, and Public Relations Management.",
+        "We craft narratives that resonate, campaigns that convert, and digital experiences that drive measurable impact.",
       image:
         "https://i.pinimg.com/736x/d2/d5/16/d2d5169315233a2abfb29b918db941f1.jpg",
+      impact: "+150% average increase across digital platforms",
+      metrics: [
+        "Brand Strategy & Reputation Management",
+        "Digital Marketing & Social Media Strategy",
+        "Content Production (Print, Video, Podcast)",
+        "Public Relations & Crisis Communications",
+        "Media Planning & Campaign Management",
+      ],
+    },
+    {
+      icon: Briefcase,
+      title: "Entertainment & Creative Experience Design",
+      shortDesc: "Event Production & Cultural Economy",
+      description:
+        "From concept to execution, we produce immersive experiences that captivate audiences and monetize creativity.",
+      image:
+        "https://i.pinimg.com/736x/7e/d6/5a/7ed65a934c44e7486ba52a5c813b45b8.jpg",
+      impact: "Managed 120+ large-scale events",
+      metrics: [
+        "Event Planning & Production Management",
+        "Festival & Concert Curation",
+        "Creative Economy Consulting",
+        "Talent Management & Artist Development",
+        "Experiential Marketing & Activations",
+      ],
+    },
+    {
+      icon: Users,
+      title: "Human Capital Development & Institutional Strengthening",
+      shortDesc: "Talent Engineering & Leadership Development",
+      description:
+        "We build talent pipelines, leadership academies, and organizational transformation programs that unlock human potential at scale.",
+      image:
+        "https://i.pinimg.com/1200x/7b/51/09/7b51090ec52d00e5c7deb467417cdcd8.jpg",
+      impact: "Over 7,000 individuals trained",
+      metrics: [
+        "Leadership & Executive Development Programs",
+        "Skills Acquisition & Vocational Training",
+        "Organizational Development & Change Management",
+        "Performance Management Systems Design",
+        "Youth Empowerment & Entrepreneurship Training",
+      ],
+    },
+    {
+      icon: BookOpen,
+      title: "Policy & Economic Development Consulting",
+      shortDesc: "Strategic Governance & Systems Design",
+      description:
+        "We design evidence-based policies, economic frameworks, and governance systems that enable sustainable development.",
+      image:
+        "https://i.pinimg.com/1200x/44/09/f3/4409f36659f44eb7bca9acc5c46ffb9e.jpg",
+      impact: "Stakeholder frameworks reaching over 1.2 million citizens",
+      metrics: [
+        "Policy Research & Strategic Analysis",
+        "Economic Development Planning",
+        "Governance & Institutional Reform",
+        "Monitoring & Evaluation (M&E) Systems",
+        "Stakeholder Engagement (SEPTA Framework)",
+      ],
     },
   ];
 
   return (
     <main className="bg-white">
       {/* Header Section */}
-      <section className="container mx-auto px-6 lg:px-12 pt-32 pb-12">
+      <section className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white">
+        <div className="container mx-auto px-6 lg:px-12 pt-32 pb-16">
+          <AnimatedContent
+            distance={60}
+            direction="vertical"
+            duration={0.8}
+            initialOpacity={0}
+            animateOpacity
+            threshold={0.2}
+          >
+            <h1 className="text-5xl lg:text-7xl font-bold mb-6">
+              Our Services
+            </h1>
+            <div className="w-20 h-1 bg-white rounded-full my-6" />
+            <p className="text-xl lg:text-2xl leading-relaxed max-w-5xl">
+              &quot;THE FIVE VERTICALS OF THE NEXUS&quot;
+            </p>
+            <p className="text-lg lg:text-xl leading-relaxed max-w-5xl mt-4">
+              MOTRAC operates as an integrated consultancy ecosystem — where
+              technology, human capital, communications, creativity, and policy
+              converge to deliver transformative solutions across industries and
+              geographies.
+            </p>
+          </AnimatedContent>
+        </div>
+      </section>
+
+      {/* Services Overview Cards */}
+      <section className="container mx-auto px-6 lg:px-12 py-20">
         <AnimatedContent
           distance={60}
           direction="vertical"
@@ -61,63 +143,88 @@ export default function ServicesPage() {
           animateOpacity
           threshold={0.2}
         >
-          <div className="max-w-4xl">
-            <h1 className="text-5xl lg:text-6xl font-bold text-gray-800 mb-4">
-              Our Services
-            </h1>
-            <div className="w-16 h-1 bg-[#F23B11] rounded-full my-4" />
-            <p className="text-lg lg:text-xl text-gray-700 leading-relaxed mt-6">
-              At Motrac Global Resources Limited, we provide diverse consulting
-              and development solutions designed to empower individuals,
-              businesses, and institutions for sustainable growth.
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
+              Service Verticals
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              Five interconnected service lines designed to address
+              Africa&apos;s most pressing transformation challenges
             </p>
           </div>
         </AnimatedContent>
-      </section>
 
-      {/* Services Grid */}
-      <section className="container mx-auto px-6 lg:px-12 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
               <AnimatedContent
                 key={index}
                 distance={80}
-                direction="vertical"
+                direction={index % 2 === 0 ? "horizontal" : "horizontal"}
                 duration={0.7}
                 delay={0.1 + index * 0.1}
+                reverse={index % 2 !== 0}
                 initialOpacity={0}
                 animateOpacity
                 threshold={0.1}
               >
-                <div className="bg-white border border-gray-100 shadow-md rounded-xl overflow-hidden hover:border-[#F23B11] transition-colors">
-                  {/* Image Space */}
-                  <div className="w-full h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative">
+                <div className="bg-white border-2 border-gray-100 rounded-2xl overflow-hidden hover:border-[#F23B11] transition-all shadow-lg hover:shadow-xl">
+                  {/* Image Header */}
+                  <div className="relative w-full h-56 bg-gradient-to-br from-gray-100 to-gray-200">
                     <Image
                       src={service.image}
                       alt={service.title}
-                      width={400}
-                      height={192}
-                      className="w-full h-full object-cover"
-                      priority={index < 3}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      priority={index < 2}
                       unoptimized
                     />
-                    <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200 opacity-0 hover:opacity-100 transition-opacity">
-                      <div className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white p-4 rounded-full">
-                        <IconComponent size={32} />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white p-3 rounded-lg">
+                          <IconComponent size={24} />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-xl font-bold text-white">
+                            {service.title}
+                          </h3>
+                          <p className="text-sm text-white/90">
+                            {service.shortDesc}
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
 
                   {/* Content */}
                   <div className="p-6">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-700 text-sm leading-relaxed">
+                    <p className="text-gray-700 leading-relaxed mb-4">
                       {service.description}
                     </p>
+
+                    {/* Impact Badge */}
+                    <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#F23B11]/10 to-[#ff6844]/10 px-4 py-2 rounded-full mb-4">
+                      <TrendingUp size={16} className="text-[#F23B11]" />
+                      <span className="text-sm font-semibold text-[#F23B11]">
+                        {service.impact}
+                      </span>
+                    </div>
+
+                    {/* Quick Preview List */}
+                    <div className="text-sm text-gray-600">
+                      <p className="font-semibold mb-2">Key Services:</p>
+                      <ul className="space-y-1">
+                        {service.metrics.slice(0, 3).map((metric, idx) => (
+                          <li key={idx} className="flex items-start gap-2">
+                            <span className="text-[#F23B11] mt-0.5">•</span>
+                            <span>{metric}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </AnimatedContent>
@@ -126,8 +233,8 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Detailed Services Breakdown */}
-      <section className="bg-gray-50 py-20 mt-12">
+      {/* Detailed Service Breakdown */}
+      <section className="bg-gray-50 py-20">
         <div className="container mx-auto px-6 lg:px-12">
           <AnimatedContent
             distance={60}
@@ -137,193 +244,392 @@ export default function ServicesPage() {
             animateOpacity
             threshold={0.2}
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 text-center mb-16">
-              Service Categories
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 text-center mb-16">
+              Service Deep Dive
             </h2>
           </AnimatedContent>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* ICT Services Detail */}
+          <div className="space-y-12">
+            {/* ICT Vertical */}
             <AnimatedContent
               distance={80}
-              direction="horizontal"
+              direction="vertical"
+              duration={0.7}
+              delay={0.1}
+              initialOpacity={0}
+              animateOpacity
+              threshold={0.1}
+            >
+              <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-lg">
+                <div className="flex items-start gap-6 mb-8">
+                  <div className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white p-4 rounded-xl">
+                    <Monitor size={32} />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-3xl font-bold text-gray-800 mb-2">
+                      Information Communication Technology (ICT)
+                    </h3>
+                    <p className="text-lg text-gray-600">
+                      Digital Infrastructure & Innovation Systems
+                    </p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-800 mb-4">
+                      Core Offerings
+                    </h4>
+                    <ul className="space-y-3 text-gray-700">
+                      {services[0].metrics.map((metric, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-[#F23B11] rounded-full mt-2" />
+                          <span>{metric}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-800 mb-4">
+                      Impact Snapshot
+                    </h4>
+                    <div className="space-y-4">
+                      <div className="bg-gradient-to-r from-[#F23B11]/10 to-[#ff6844]/10 rounded-xl p-6">
+                        <div className="flex items-center gap-3 mb-2">
+                          <Target size={24} className="text-[#F23B11]" />
+                          <span className="text-2xl font-bold text-gray-800">
+                            30-40%
+                          </span>
+                        </div>
+                        <p className="text-gray-700">
+                          Operational efficiency gains across client
+                          organizations
+                        </p>
+                      </div>
+                      <div className="bg-gradient-to-r from-[#F23B11]/10 to-[#ff6844]/10 rounded-xl p-6">
+                        <div className="flex items-center gap-3 mb-2">
+                          <Award size={24} className="text-[#F23B11]" />
+                          <span className="text-2xl font-bold text-gray-800">
+                            100+
+                          </span>
+                        </div>
+                        <p className="text-gray-700">
+                          Digital transformation projects delivered
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </AnimatedContent>
+
+            {/* Strategic Communications Vertical */}
+            <AnimatedContent
+              distance={80}
+              direction="vertical"
               duration={0.7}
               delay={0.2}
               initialOpacity={0}
               animateOpacity
               threshold={0.1}
             >
-              <div className="bg-white rounded-xl p-8 shadow-md">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white p-2 rounded-lg">
-                    <Monitor size={24} />
+              <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-lg">
+                <div className="flex items-start gap-6 mb-8">
+                  <div className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white p-4 rounded-xl">
+                    <Mic size={32} />
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-800">
-                      ICT Solutions
+                  <div className="flex-1">
+                    <h3 className="text-3xl font-bold text-gray-800 mb-2">
+                      Strategic Communications & Media Intelligence
                     </h3>
-                    <p className="text-sm text-gray-600 mt-1">
-                      Technology & Innovation
+                    <p className="text-lg text-gray-600">
+                      Brand Strategy & Digital Engagement
                     </p>
                   </div>
                 </div>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#F23B11] mt-1">•</span>
-                    <span>Web Design & Hosting</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#F23B11] mt-1">•</span>
-                    <span>Database Management</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#F23B11] mt-1">•</span>
-                    <span>Software Development</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#F23B11] mt-1">•</span>
-                    <span>Enterprise Content Management</span>
-                  </li>
-                </ul>
+
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-800 mb-4">
+                      Service Portfolio
+                    </h4>
+                    <ul className="space-y-3 text-gray-700">
+                      {services[1].metrics.map((metric, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-[#F23B11] rounded-full mt-2" />
+                          <span>{metric}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-800 mb-4">
+                      Proven Metrics
+                    </h4>
+                    <div className="space-y-4">
+                      <div className="bg-gradient-to-r from-[#F23B11]/10 to-[#ff6844]/10 rounded-xl p-6">
+                        <div className="flex items-center gap-3 mb-2">
+                          <TrendingUp size={24} className="text-[#F23B11]" />
+                          <span className="text-2xl font-bold text-gray-800">
+                            +150%
+                          </span>
+                        </div>
+                        <p className="text-gray-700">
+                          Average increase in engagement across digital
+                          platforms
+                        </p>
+                      </div>
+                      <div className="bg-gradient-to-r from-[#F23B11]/10 to-[#ff6844]/10 rounded-xl p-6">
+                        <div className="flex items-center gap-3 mb-2">
+                          <Award size={24} className="text-[#F23B11]" />
+                          <span className="text-2xl font-bold text-gray-800">
+                            200+
+                          </span>
+                        </div>
+                        <p className="text-gray-700">
+                          Successful campaigns launched across Africa
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </AnimatedContent>
 
-            {/* Human Capital Detail */}
+            {/* Entertainment & Creative Experience Vertical */}
             <AnimatedContent
               distance={80}
-              direction="horizontal"
+              direction="vertical"
               duration={0.7}
               delay={0.3}
-              reverse={true}
               initialOpacity={0}
               animateOpacity
               threshold={0.1}
             >
-              <div className="bg-white rounded-xl p-8 shadow-md">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white p-2 rounded-lg">
-                    <Users size={24} />
+              <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-lg">
+                <div className="flex items-start gap-6 mb-8">
+                  <div className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white p-4 rounded-xl">
+                    <Briefcase size={32} />
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-800">
-                      Human Capital Development
+                  <div className="flex-1">
+                    <h3 className="text-3xl font-bold text-gray-800 mb-2">
+                      Entertainment & Creative Experience Design
                     </h3>
-                    <p className="text-sm text-gray-600 mt-1">
-                      People & Capacity Building
+                    <p className="text-lg text-gray-600">
+                      Event Production & Cultural Economy
                     </p>
                   </div>
                 </div>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#F23B11] mt-1">•</span>
-                    <span>Skills Acquisition Programs</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#F23B11] mt-1">•</span>
-                    <span>Capacity Building Training</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#F23B11] mt-1">•</span>
-                    <span>Motivational Speaking & Mentoring</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#F23B11] mt-1">•</span>
-                    <span>
-                      Career Guidance & Sustainable Livelihood Training
-                    </span>
-                  </li>
-                </ul>
+
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-800 mb-4">
+                      Core Services
+                    </h4>
+                    <ul className="space-y-3 text-gray-700">
+                      {services[2].metrics.map((metric, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-[#F23B11] rounded-full mt-2" />
+                          <span>{metric}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-800 mb-4">
+                      Event Highlights
+                    </h4>
+                    <div className="space-y-4">
+                      <div className="bg-gradient-to-r from-[#F23B11]/10 to-[#ff6844]/10 rounded-xl p-6">
+                        <div className="flex items-center gap-3 mb-2">
+                          <Award size={24} className="text-[#F23B11]" />
+                          <span className="text-2xl font-bold text-gray-800">
+                            120+
+                          </span>
+                        </div>
+                        <p className="text-gray-700">
+                          Large-scale events managed successfully
+                        </p>
+                      </div>
+                      <div className="bg-gradient-to-r from-[#F23B11]/10 to-[#ff6844]/10 rounded-xl p-6">
+                        <div className="flex items-center gap-3 mb-2">
+                          <Target size={24} className="text-[#F23B11]" />
+                          <span className="text-2xl font-bold text-gray-800">
+                            500K+
+                          </span>
+                        </div>
+                        <p className="text-gray-700">
+                          Cumulative event attendees across portfolio
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </AnimatedContent>
 
-            {/* Media Services Detail */}
+            {/* Human Capital Development Vertical */}
             <AnimatedContent
               distance={80}
-              direction="horizontal"
+              direction="vertical"
               duration={0.7}
               delay={0.4}
               initialOpacity={0}
               animateOpacity
               threshold={0.1}
             >
-              <div className="bg-white rounded-xl p-8 shadow-md">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white p-2 rounded-lg">
-                    <Mic size={24} />
+              <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-lg">
+                <div className="flex items-start gap-6 mb-8">
+                  <div className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white p-4 rounded-xl">
+                    <Users size={32} />
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-800">
-                      Media & Entertainment
+                  <div className="flex-1">
+                    <h3 className="text-3xl font-bold text-gray-800 mb-2">
+                      Human Capital Development & Institutional Strengthening
                     </h3>
-                    <p className="text-sm text-gray-600 mt-1">
-                      Content & Events
+                    <p className="text-lg text-gray-600">
+                      Talent Engineering & Leadership Development
                     </p>
                   </div>
                 </div>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#F23B11] mt-1">•</span>
-                    <span>Media Planning & Strategy</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#F23B11] mt-1">•</span>
-                    <span>Content Production (Print & Electronic)</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#F23B11] mt-1">•</span>
-                    <span>Event Planning & Management</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#F23B11] mt-1">•</span>
-                    <span>Outdoor Advertisement & PR Management</span>
-                  </li>
-                </ul>
+
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-800 mb-4">
+                      Service Lines
+                    </h4>
+                    <ul className="space-y-3 text-gray-700">
+                      {services[3].metrics.map((metric, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-[#F23B11] rounded-full mt-2" />
+                          <span>{metric}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-800 mb-4">
+                      Training Impact
+                    </h4>
+                    <div className="space-y-4">
+                      <div className="bg-gradient-to-r from-[#F23B11]/10 to-[#ff6844]/10 rounded-xl p-6">
+                        <div className="flex items-center gap-3 mb-2">
+                          <Award size={24} className="text-[#F23B11]" />
+                          <span className="text-2xl font-bold text-gray-800">
+                            7,000+
+                          </span>
+                        </div>
+                        <p className="text-gray-700">
+                          Individuals trained across various programs
+                        </p>
+                      </div>
+                      <div className="bg-gradient-to-r from-[#F23B11]/10 to-[#ff6844]/10 rounded-xl p-6">
+                        <div className="flex items-center gap-3 mb-2">
+                          <Target size={24} className="text-[#F23B11]" />
+                          <span className="text-2xl font-bold text-gray-800">
+                            85%
+                          </span>
+                        </div>
+                        <p className="text-gray-700">
+                          Participant satisfaction and skills retention rate
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </AnimatedContent>
 
-            {/* Policy Development Detail */}
+            {/* Policy & Economic Development Vertical */}
             <AnimatedContent
               distance={80}
-              direction="horizontal"
+              direction="vertical"
               duration={0.7}
               delay={0.5}
-              reverse={true}
               initialOpacity={0}
               animateOpacity
               threshold={0.1}
             >
-              <div className="bg-white rounded-xl p-8 shadow-md">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white p-2 rounded-lg">
-                    <BookOpen size={24} />
+              <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-lg">
+                <div className="flex items-start gap-6 mb-8">
+                  <div className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white p-4 rounded-xl">
+                    <BookOpen size={32} />
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-800">
-                      Policy Development
+                  <div className="flex-1">
+                    <h3 className="text-3xl font-bold text-gray-800 mb-2">
+                      Policy & Economic Development Consulting
                     </h3>
-                    <p className="text-sm text-gray-600 mt-1">
-                      Economic & Governance
+                    <p className="text-lg text-gray-600">
+                      Strategic Governance & Systems Design
                     </p>
                   </div>
                 </div>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#F23B11] mt-1">•</span>
-                    <span>Economic Framework Development</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#F23B11] mt-1">•</span>
-                    <span>Political Strategy Consulting</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#F23B11] mt-1">•</span>
-                    <span>Policy Implementation & Monitoring</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#F23B11] mt-1">•</span>
-                    <span>Bottom-Top Approach Methodology</span>
-                  </li>
-                </ul>
+
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-800 mb-4">
+                      Key Focus Areas
+                    </h4>
+                    <ul className="space-y-3 text-gray-700">
+                      {services[4].metrics.map((metric, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-[#F23B11] rounded-full mt-2" />
+                          <span>{metric}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div className="mt-6 p-4 bg-gray-50 rounded-xl">
+                      <h5 className="font-bold text-gray-800 mb-2">
+                        SEPTA Framework
+                      </h5>
+                      <p className="text-sm text-gray-700">
+                        Our proprietary{" "}
+                        <span className="font-semibold">
+                          Stakeholder Engagement, Policy Analysis, and
+                          Transformation Architecture (SEPTA)
+                        </span>{" "}
+                        framework ensures bottom-up policy design that reflects
+                        ground realities.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-800 mb-4">
+                      Results
+                    </h4>
+                    <div className="space-y-4">
+                      <div className="bg-gradient-to-r from-[#F23B11]/10 to-[#ff6844]/10 rounded-xl p-6">
+                        <div className="flex items-center gap-3 mb-2">
+                          <Award size={24} className="text-[#F23B11]" />
+                          <span className="text-2xl font-bold text-gray-800">
+                            1.2M+
+                          </span>
+                        </div>
+                        <p className="text-gray-700">
+                          Citizens reached through facilitated stakeholder
+                          frameworks
+                        </p>
+                      </div>
+                      <div className="bg-gradient-to-r from-[#F23B11]/10 to-[#ff6844]/10 rounded-xl p-6">
+                        <div className="flex items-center gap-3 mb-2">
+                          <Target size={24} className="text-[#F23B11]" />
+                          <span className="text-2xl font-bold text-gray-800">
+                            15+
+                          </span>
+                        </div>
+                        <p className="text-gray-700">
+                          Policy frameworks developed and implemented
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </AnimatedContent>
           </div>
@@ -331,32 +637,31 @@ export default function ServicesPage() {
       </section>
 
       {/* Call-to-Action Section */}
-      <section className="container mx-auto px-6 lg:px-12 py-20">
-        <AnimatedContent
-          distance={60}
-          direction="vertical"
-          duration={0.8}
-          delay={0.2}
-          initialOpacity={0}
-          animateOpacity
-          threshold={0.2}
-        >
-          <div className="bg-gradient-to-r from-[#F23B11]/10 to-[#ff6844]/10 py-12 px-8 lg:px-16 rounded-xl text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
-              Ready to Grow with Us?
+      <section className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] py-20">
+        <div className="container mx-auto px-6 lg:px-12 text-center">
+          <AnimatedContent
+            distance={60}
+            direction="vertical"
+            duration={0.8}
+            initialOpacity={0}
+            animateOpacity
+            threshold={0.2}
+          >
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Ready to Transform Your Organization?
             </h2>
-            <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-              Partner with Motrac Global Resources Limited to transform ideas
-              into impactful results.
+            <p className="text-xl text-white mb-10 max-w-3xl mx-auto">
+              Partner with MOTRAC to unlock your organization&apos;s full
+              potential through our integrated service ecosystem.
             </p>
             <Link
               href="/contact"
-              className="inline-block bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity"
+              className="inline-block bg-white text-[#F23B11] px-10 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              Get Started Today
+              Start Your Transformation
             </Link>
-          </div>
-        </AnimatedContent>
+          </AnimatedContent>
+        </div>
       </section>
     </main>
   );

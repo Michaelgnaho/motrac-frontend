@@ -22,11 +22,12 @@ export default function Footer() {
   ];
 
   const navLinks = [
-    { name: "Home", href: "/home" },
+    { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "Projects", href: "/projects" },
     { name: "Clients", href: "/clients" },
+    { name: "Team", href: "/team" },
     { name: "Contact", href: "/contact" },
   ];
 
