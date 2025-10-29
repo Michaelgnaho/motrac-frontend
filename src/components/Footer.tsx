@@ -15,9 +15,18 @@ export default function Footer() {
     },
     {
       icon: MapPin,
-      title: "Office Address",
-      content:
-        "Suit B10/B11, 2XL Mall, Plot CO2, Christiana Ajayi-Okunuga Street, off 1st Avenue, Gwarimpa Federal Housing Estate, FCT Abuja",
+      title: "UK Office",
+      content: "61, Bridge Street, Kington, HR5 3DJ",
+    },
+    {
+      icon: MapPin,
+      title: "Abuja Office",
+      content: "55, Nusa Amagbor, FO1, Kubwa Extension, Bwari LGA, FCT, Abuja",
+    },
+    {
+      icon: MapPin,
+      title: "Kogi Office",
+      content: "8, Palasa Street, Off Graj Hotel Road, GRA, Lokoja, Kogi State",
     },
   ];
 

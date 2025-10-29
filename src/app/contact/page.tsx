@@ -17,9 +17,18 @@ export default function ContactPage() {
     },
     {
       icon: MapPin,
-      title: "Office Address",
-      content:
-        "Suit B10/B11, 2XL Mall, Plot CO2, Christiana Ajayi-Okunuga Street, off 1st Avenue, Gwarimpa Federal Housing Estate, FCT Abuja",
+      title: "UK Office",
+      content: "61, Bridge Street, Kington, HR5 3DJ",
+    },
+    {
+      icon: MapPin,
+      title: "Abuja Office",
+      content: "55, Nusa Amagbor, FO1, Kubwa Extension, Bwari LGA, FCT, Abuja",
+    },
+    {
+      icon: MapPin,
+      title: "Kogi Office",
+      content: "8, Palasa Street, Off Graj Hotel Road, GRA, Lokoja, Kogi State",
     },
   ];
 
@@ -48,7 +57,7 @@ export default function ContactPage() {
 
       {/* Contact Information Section */}
       <section className="container mx-auto px-6 lg:px-12 pb-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
           {contactInfo.map((info, index) => {
             const IconComponent = info.icon;
             return (
