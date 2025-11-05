@@ -20,6 +20,20 @@ import img8 from "../../../public/Uduakabasi Ntekim.jpg";
 export default function TeamPage() {
   const leadership = [
     {
+      name: "Michael Adeyemi Gnaho",
+      title: "Full-Stack Developer",
+      image: img6,
+      bio: "A versatile full-stack developer with a strong focus on front-end technologies. Michael builds complete web applications with seamless user experiences.",
+      expertise: [
+        "Frontend Development",
+        "Backend Development",
+        "Full-Stack Solutions",
+      ],
+      portfolio: "https://new-portfolio-nu-six-43.vercel.app",
+      phone: "08145046894",
+      email: "gnahomichael@gmail.com",
+    },
+    {
       name: "Boluwatife Nathaniel Awosanmi",
       title: "Backend Engineer",
       image: img1,
@@ -75,20 +89,7 @@ export default function TeamPage() {
       phone: "09037140877",
       email: "emmano2ini@gmail.com",
     },
-    {
-      name: "Michael Adeyemi Gnaho",
-      title: "Full-Stack Developer",
-      image: img6,
-      bio: "A versatile full-stack developer with a strong focus on front-end technologies. Michael builds complete web applications with seamless user experiences.",
-      expertise: [
-        "Frontend Development",
-        "Backend Development",
-        "Full-Stack Solutions",
-      ],
-      portfolio: "https://new-portfolio-nu-six-43.vercel.app",
-      phone: "08145046894",
-      email: "gnahomichael@gmail.com",
-    },
+
     {
       name: "Clifford Adeyi",
       title: "Creative Designer",
