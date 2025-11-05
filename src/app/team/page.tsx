@@ -1,83 +1,139 @@
-import { Linkedin, Mail, Award, Users, Target, Lightbulb } from "lucide-react";
+import {
+  Globe,
+  Mail,
+  Phone,
+  Award,
+  Users,
+  Target,
+  Lightbulb,
+} from "lucide-react";
 import Image from "next/image";
 
 export default function TeamPage() {
   const leadership = [
     {
-      name: "Dr. Adebayo Ogunlesi",
-      title: "Founder & Chief Executive Officer",
+      name: "Boluwatife Nathaniel Awosanmi",
+      title: "Backend Engineer",
       image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-      bio: "A visionary leader with over 20 years of experience in strategic consulting and human capital development across Africa. Dr. Ogunlesi has pioneered indigenous innovation frameworks that have transformed over 500 organizations.",
+        "https://drive.google.com/thumbnail?id=1ci_wmvRXAn-Ai-mLBtgBccGUd1rdNxU0&sz=w400",
+      bio: "A skilled backend engineer specializing in Django and Node.js development. Boluwatife builds robust and scalable server-side solutions that power modern applications.",
+      expertise: ["Django", "Node.js", "API Development"],
+      portfolio: "https://github.com/NathanielWatife",
+      phone: "07052340613",
+      email: "awosanminathaniel0@gmail.com",
+    },
+    {
+      name: "Bassey Emmanuel Emmanuel",
+      title: "Smart Contract / Back-End Developer",
+      image:
+        "https://drive.google.com/thumbnail?id=1v-Foic_mRjJGepfoXlP47djvzGUf2Q6V&sz=w400",
+      bio: "A blockchain specialist and backend developer with expertise in smart contract development. Bassey creates secure and efficient decentralized solutions.",
       expertise: [
-        "Strategic Leadership",
-        "Innovation Systems",
-        "Policy Development",
+        "Smart Contracts",
+        "Blockchain Development",
+        "Backend Systems",
       ],
-      linkedin: "#",
-      email: "adebayo@motrac.com",
+      portfolio: "https://bassey-emmanuel-alpha.vercel.app/",
+      phone: "07038564600",
+      email: "basscee1604@gmail.com",
     },
     {
-      name: "Ngozi Okoro",
-      title: "Chief Operations Officer",
+      name: "Selimat Akinwale",
+      title: "UI/UX & Product Designer",
       image:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
-      bio: "An operational excellence expert specializing in organizational transformation and process optimization. Ngozi has led institutional strengthening initiatives across 15 African countries.",
+        "https://drive.google.com/thumbnail?id=1kbPmIhqOTJR3qTsDPLbEOcE_CDkqa6_A&sz=w400",
+      bio: "A creative product designer focused on crafting intuitive and visually stunning user experiences. Selimat transforms complex problems into elegant design solutions.",
+      expertise: ["UI/UX Design", "Product Design", "User Research"],
+      portfolio: "https://selimatportfolio.framer.website/",
+      phone: "9048608305",
+      email: "selimatakinwale@gmail.com",
+    },
+    {
+      name: "Edidiong Imoh Udofia",
+      title: "UI/UX Designer",
+      image:
+        "https://drive.google.com/thumbnail?id=1evS2M7HuxqzQ5acwDn2gGro_Cmp8Ll26&sz=w400",
+      bio: "A passionate UI/UX designer dedicated to creating user-centered designs that enhance digital experiences and drive engagement.",
+      expertise: ["UI Design", "UX Design", "Interaction Design"],
+      portfolio: "https://t.me/+DlryIM2vQ74xOTA0",
+      phone: "08118337762",
+      email: "edidiongimohh@gmail.com",
+    },
+    {
+      name: "Emmanuel",
+      title: "UI/UX Designer",
+      image:
+        "https://drive.google.com/thumbnail?id=1NAzGtPwAJqYWS1Y_wEC5PR6_HVrNV7Md&sz=w400",
+      bio: "A talented UI/UX designer with a keen eye for aesthetics and functionality. Emmanuel creates designs that balance beauty with usability.",
+      expertise: ["UI/UX Design", "Visual Design", "Prototyping"],
+      portfolio: "https://www.behance.net/emmanueleyo",
+      phone: "09037140877",
+      email: "emmano2ini@gmail.com",
+    },
+    {
+      name: "Michael Adeyemi Gnaho",
+      title: "Full-Stack Developer",
+      image:
+        "https://drive.google.com/thumbnail?id=1uUq5Dk2OdTzuIFhDwf5tyoEwy9E9Z_oz&sz=w400",
+      bio: "A versatile full-stack developer with a strong focus on front-end technologies. Michael builds complete web applications with seamless user experiences.",
       expertise: [
-        "Operational Strategy",
-        "Change Management",
-        "Institutional Development",
+        "Frontend Development",
+        "Backend Development",
+        "Full-Stack Solutions",
       ],
-      linkedin: "#",
-      email: "ngozi@motrac.com",
+      portfolio: "https://new-portfolio-nu-six-43.vercel.app",
+      phone: "08145046894",
+      email: "gnahomichael@gmail.com",
     },
     {
-      name: "Kwame Mensah",
-      title: "Chief Technology Officer",
+      name: "Clifford Adeyi",
+      title: "Creative Designer",
       image:
-        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop",
-      bio: "A tech innovator driving digital transformation across Africa's public and private sectors. Kwame has architected 100+ enterprise systems that power some of the continent's fastest-growing organizations.",
+        "https://drive.google.com/thumbnail?id=1OhzlVULFKJOUyHofMMlMEL450qlXGoub&sz=w400",
+      bio: "A creative designer with a passion for visual storytelling and brand identity. Clifford brings innovative design concepts to life across multiple platforms.",
+      expertise: ["Graphic Design", "Brand Identity", "Creative Direction"],
+      portfolio: "https://www.behance.net/mavemindz",
+      email: "cliffordadeyi@gmail.com",
+    },
+    {
+      name: "Uduakabasi Ntekim",
+      title: "Content Creator & Social Media Manager",
+      image:
+        "https://drive.google.com/thumbnail?id=1zFgkZJaLQRqAyB4-3VOIDzA2vvdeAbUp&sz=w400",
+      bio: "A dynamic content creator and social media strategist who crafts compelling narratives and builds engaged online communities.",
       expertise: [
-        "Digital Transformation",
-        "Enterprise Architecture",
-        "AI & Data Systems",
+        "Content Creation",
+        "Social Media Strategy",
+        "Community Management",
       ],
-      linkedin: "#",
-      email: "kwame@motrac.com",
+      portfolio: "https://tinyurl.com/CreateWithYhudee",
+      phone: "08052772368",
+      email: "uduakabasintekim33@gmail.com",
     },
     {
-      name: "Amina Hassan",
-      title: "Head of Strategic Communications",
+      name: "Aroyewon Olayinka Ayanfeoluwa",
+      title: "Graphics Designer",
       image:
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop",
-      bio: "A communications strategist with a track record of building powerful brand narratives and stakeholder engagement frameworks. Amina has led campaigns that reached over 50 million people across Africa.",
-      expertise: ["Brand Strategy", "Media Relations", "Digital Marketing"],
-      linkedin: "#",
-      email: "amina@motrac.com",
+        "https://drive.google.com/thumbnail?id=1fCFd6BHz49eCZIivU4_0fg-7uxWWK1nw&sz=w400",
+      bio: "A skilled graphics designer who transforms ideas into visual masterpieces. Ayanfeoluwa specializes in creating impactful designs for brands and businesses.",
+      expertise: ["Graphics Design", "Visual Communication", "Brand Design"],
+      portfolio: "https://www.instagram.com/ayanfegraphicsconcept",
+      phone: "08127542324",
+      email: "ayanfeoluwa098@gmail.com",
     },
     {
-      name: "Chidi Eze",
-      title: "Director of Human Capital Development",
+      name: "Emem Edem",
+      title: "Frontend Developer",
       image:
-        "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop",
-      bio: "An educator and capacity-building specialist passionate about unlocking human potential. Chidi has trained over 7,000 individuals and designed leadership programs for Fortune 500 companies.",
+        "https://drive.google.com/thumbnail?id=1vqVNB0mJIQyUcg2sL78ybpKEqLMhsWLY&sz=w400",
+      bio: "A frontend developer focused on building responsive and performant web interfaces. Emem creates seamless user experiences with modern web technologies.",
       expertise: [
-        "Leadership Development",
-        "Talent Management",
-        "Training Design",
+        "Frontend Development",
+        "Web Development",
+        "Responsive Design",
       ],
-      linkedin: "#",
-      email: "chidi@motrac.com",
-    },
-    {
-      name: "Fatima Diallo",
-      title: "Head of Policy & Economic Development",
-      image:
-        "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=400&h=400&fit=crop",
-      bio: "A policy architect with expertise in evidence-based governance and economic strategy. Fatima has advised governments and multilateral organizations on frameworks impacting over 5 million citizens.",
-      expertise: ["Policy Analysis", "Economic Planning", "M&E Systems"],
-      linkedin: "#",
-      email: "fatima@motrac.com",
+      phone: "08164149554",
+      email: "simplyemem10@gmail.com",
     },
   ];
 
@@ -167,11 +223,11 @@ export default function TeamPage() {
         <div className="container mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
-              Executive Leadership Team
+              Our Creative Team
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Meet the visionaries driving MOTRAC&apos;s mission to transform
-              Africa&apos;s intellectual capital into global competitiveness
+              Meet the talented professionals driving MOTRAC&apos;s mission
+              through innovation, creativity, and technical excellence
             </p>
           </div>
 
@@ -186,7 +242,8 @@ export default function TeamPage() {
                   <Image
                     src={leader.image}
                     alt={leader.name}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -222,13 +279,17 @@ export default function TeamPage() {
 
                   {/* Contact Links */}
                   <div className="flex gap-3 pt-4 border-t border-gray-100">
-                    <a
-                      href={leader.linkedin}
-                      className="flex items-center justify-center w-10 h-10 bg-gray-100 hover:bg-[#F23B11] text-gray-600 hover:text-white rounded-lg transition-colors"
-                      aria-label={`${leader.name} LinkedIn`}
-                    >
-                      <Linkedin size={18} />
-                    </a>
+                    {leader.portfolio && (
+                      <a
+                        href={leader.portfolio}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center w-10 h-10 bg-gray-100 hover:bg-[#F23B11] text-gray-600 hover:text-white rounded-lg transition-colors"
+                        aria-label={`${leader.name} Portfolio`}
+                      >
+                        <Globe size={18} />
+                      </a>
+                    )}
                     <a
                       href={`mailto:${leader.email}`}
                       className="flex items-center justify-center w-10 h-10 bg-gray-100 hover:bg-[#F23B11] text-gray-600 hover:text-white rounded-lg transition-colors"
@@ -236,6 +297,15 @@ export default function TeamPage() {
                     >
                       <Mail size={18} />
                     </a>
+                    {leader.phone && (
+                      <a
+                        href={`tel:${leader.phone}`}
+                        className="flex items-center justify-center w-10 h-10 bg-gray-100 hover:bg-[#F23B11] text-gray-600 hover:text-white rounded-lg transition-colors"
+                        aria-label={`Call ${leader.name}`}
+                      >
+                        <Phone size={18} />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -315,10 +385,10 @@ export default function TeamPage() {
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { number: "50+", label: "Team Members" },
-              { number: "15", label: "African Countries Represented" },
-              { number: "200+", label: "Years Combined Experience" },
-              { number: "10+", label: "Languages Spoken" },
+              { number: "10+", label: "Team Members" },
+              { number: "5+", label: "Specializations" },
+              { number: "50+", label: "Projects Delivered" },
+              { number: "100%", label: "Dedication to Excellence" },
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-5xl lg:text-6xl font-bold text-white mb-2">
