@@ -8,14 +8,21 @@ import {
   Lightbulb,
 } from "lucide-react";
 import Image from "next/image";
+import img1 from "../../../public/NathanielAwosanmi.jpg";
+import img2 from "../../../public/bassie.jpg";
+import img3 from "../../../public/SelimatAkinwale.jpg";
+import img4 from "../../../public/EmemEdem.jpg";
+import img5 from "../../../public/em.jpg";
+import img6 from "../../../public/MichaelGnaho.jpg";
+import img7 from "../../../public/CliffordAdeyi.jpg";
+import img8 from "../../../public/Uduakabasi Ntekim.jpg";
 
 export default function TeamPage() {
   const leadership = [
     {
       name: "Boluwatife Nathaniel Awosanmi",
       title: "Backend Engineer",
-      image:
-        "https://drive.google.com/thumbnail?id=1ci_wmvRXAn-Ai-mLBtgBccGUd1rdNxU0&sz=w400",
+      image: img1,
       bio: "A skilled backend engineer specializing in Django and Node.js development. Boluwatife builds robust and scalable server-side solutions that power modern applications.",
       expertise: ["Django", "Node.js", "API Development"],
       portfolio: "https://github.com/NathanielWatife",
@@ -25,8 +32,7 @@ export default function TeamPage() {
     {
       name: "Bassey Emmanuel Emmanuel",
       title: "Smart Contract / Back-End Developer",
-      image:
-        "https://drive.google.com/thumbnail?id=1v-Foic_mRjJGepfoXlP47djvzGUf2Q6V&sz=w400",
+      image: img2,
       bio: "A blockchain specialist and backend developer with expertise in smart contract development. Bassey creates secure and efficient decentralized solutions.",
       expertise: [
         "Smart Contracts",
@@ -40,8 +46,7 @@ export default function TeamPage() {
     {
       name: "Selimat Akinwale",
       title: "UI/UX & Product Designer",
-      image:
-        "https://drive.google.com/thumbnail?id=1kbPmIhqOTJR3qTsDPLbEOcE_CDkqa6_A&sz=w400",
+      image: img3,
       bio: "A creative product designer focused on crafting intuitive and visually stunning user experiences. Selimat transforms complex problems into elegant design solutions.",
       expertise: ["UI/UX Design", "Product Design", "User Research"],
       portfolio: "https://selimatportfolio.framer.website/",
@@ -52,7 +57,8 @@ export default function TeamPage() {
       name: "Edidiong Imoh Udofia",
       title: "UI/UX Designer",
       image:
-        "https://drive.google.com/thumbnail?id=1evS2M7HuxqzQ5acwDn2gGro_Cmp8Ll26&sz=w400",
+        "https://drive.google.com/thumbnail?id=1fCFd6BHz49eCZIivU4_0fg-7uxWWK1nw&sz=w400",
+
       bio: "A passionate UI/UX designer dedicated to creating user-centered designs that enhance digital experiences and drive engagement.",
       expertise: ["UI Design", "UX Design", "Interaction Design"],
       portfolio: "https://t.me/+DlryIM2vQ74xOTA0",
@@ -62,8 +68,7 @@ export default function TeamPage() {
     {
       name: "Emmanuel",
       title: "UI/UX Designer",
-      image:
-        "https://drive.google.com/thumbnail?id=1NAzGtPwAJqYWS1Y_wEC5PR6_HVrNV7Md&sz=w400",
+      image: img5,
       bio: "A talented UI/UX designer with a keen eye for aesthetics and functionality. Emmanuel creates designs that balance beauty with usability.",
       expertise: ["UI/UX Design", "Visual Design", "Prototyping"],
       portfolio: "https://www.behance.net/emmanueleyo",
@@ -73,8 +78,7 @@ export default function TeamPage() {
     {
       name: "Michael Adeyemi Gnaho",
       title: "Full-Stack Developer",
-      image:
-        "https://drive.google.com/thumbnail?id=1uUq5Dk2OdTzuIFhDwf5tyoEwy9E9Z_oz&sz=w400",
+      image: img6,
       bio: "A versatile full-stack developer with a strong focus on front-end technologies. Michael builds complete web applications with seamless user experiences.",
       expertise: [
         "Frontend Development",
@@ -88,8 +92,7 @@ export default function TeamPage() {
     {
       name: "Clifford Adeyi",
       title: "Creative Designer",
-      image:
-        "https://drive.google.com/thumbnail?id=1OhzlVULFKJOUyHofMMlMEL450qlXGoub&sz=w400",
+      image: img7,
       bio: "A creative designer with a passion for visual storytelling and brand identity. Clifford brings innovative design concepts to life across multiple platforms.",
       expertise: ["Graphic Design", "Brand Identity", "Creative Direction"],
       portfolio: "https://www.behance.net/mavemindz",
@@ -98,8 +101,7 @@ export default function TeamPage() {
     {
       name: "Uduakabasi Ntekim",
       title: "Content Creator & Social Media Manager",
-      image:
-        "https://drive.google.com/thumbnail?id=1zFgkZJaLQRqAyB4-3VOIDzA2vvdeAbUp&sz=w400",
+      image: img8,
       bio: "A dynamic content creator and social media strategist who crafts compelling narratives and builds engaged online communities.",
       expertise: [
         "Content Creation",
@@ -124,8 +126,7 @@ export default function TeamPage() {
     {
       name: "Emem Edem",
       title: "Frontend Developer",
-      image:
-        "https://drive.google.com/thumbnail?id=1vqVNB0mJIQyUcg2sL78ybpKEqLMhsWLY&sz=w400",
+      image: img4,
       bio: "A frontend developer focused on building responsive and performant web interfaces. Emem creates seamless user experiences with modern web technologies.",
       expertise: [
         "Frontend Development",
