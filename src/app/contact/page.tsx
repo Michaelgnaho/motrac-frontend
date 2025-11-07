@@ -8,7 +8,7 @@ import {
   AlertCircle,
   Loader2,
 } from "lucide-react";
-import { useState } from "react";
+import { useState, ChangeEvent } from "react";
 
 export default function ContactPage() {
   const [formStatus, setFormStatus] = useState({ type: "", message: "" });
@@ -53,7 +53,9 @@ export default function ContactPage() {
     },
   ];
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -124,8 +126,9 @@ export default function ContactPage() {
           <div className="w-16 h-1 bg-[#F23B11] rounded-full my-4"></div>
         </div>
         <p className="text-gray-700 text-lg leading-relaxed max-w-4xl mx-auto mt-6">
-          We're here to help you transform ideas into impactful outcomes. Get in
-          touch with our team for inquiries, collaborations, or consultations.
+          We are here to help you transform ideas into impactful outcomes. Get
+          in touch with our team for inquiries, collaborations, or
+          consultations.
         </p>
       </section>
 
@@ -165,7 +168,7 @@ export default function ContactPage() {
               Send Us a Message
             </h2>
             <p className="text-gray-700 mt-2">
-              Fill out the form below and we'll get back to you shortly.
+              Fill out the form below and we will get back to you shortly.
             </p>
           </div>
 
@@ -315,7 +318,7 @@ export default function ContactPage() {
       {/* Footer CTA */}
       <section className="container mx-auto px-6 lg:px-12 py-20 text-center bg-gray-50 rounded-xl">
         <h3 className="text-2xl lg:text-3xl font-bold text-gray-800">
-          Let's collaborate to make impactful transformations happen.
+          Let us collaborate to make impactful transformations happen.
         </h3>
         <a href="/about">
           <button className="bg-gradient-to-r from-[#F23B11] to-[#ff6844] text-white px-6 py-3 rounded-lg font-medium mt-6 hover:shadow-lg transition-shadow duration-300">
